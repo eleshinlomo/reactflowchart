@@ -24,7 +24,7 @@ const Projectcard = () => {
 
   return (
     
-    <Grid container spacing={1} style={{backgroundColor: 'black'}}>
+    <Grid container spacing={1} style={{backgroundColor: 'black', xs: '100%', md: '100%', sm: '100%'}}>
 
 {/* left icons (Firstcolumn) */}
 
@@ -83,7 +83,7 @@ const Projectcard = () => {
 </Typography>
 </Box>
 
-<Box ml={23}>
+<Box>
 <Paper 
 elevation={10}
 style={{ 
@@ -123,7 +123,7 @@ style={{
 
 {/* OpenAI Helper */}
 
-<Box p = {1} display='flex' style= {{backgroundColor: "black"}}>
+<Box p = {1} display='flex' flexWrap= 'wrap'  style= {{backgroundColor: "black"}} sx={{xs: '100%', md: '100%', sm: '100%'}}>
 
     <Box >
         <img src="/openai.jpg" alt="midjourney logo" className='img' />
@@ -293,8 +293,8 @@ style={{
 
 {/* Column 3 */}
 
-      <Grid item xs={6}>
-      <Box>
+      <Grid item xs={6} >
+      <Box sx={{width: '100%'}}>
 
       <Box>
         <Typography>
@@ -319,7 +319,7 @@ style={{
 {/* Drag and Drop Detail container area*/}
 
     
-<Box  marginY = '1rem'>
+<Box  marginY = '1rem' sx={{width: '100%'}}>
 
 {/* Flownodes component*/}
 
