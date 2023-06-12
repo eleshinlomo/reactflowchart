@@ -311,7 +311,7 @@ style={{
             </Typography>
 
         <Typography>
-            Uses OpenAI to get do multiple things V1.0.4
+            Uses OpenAI to do multiple things V1.0.4
         </Typography>
         </Box>
 
