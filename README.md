@@ -2,7 +2,7 @@
 <h2>Project Status: 60% Complete</h2>
 
 <h2> ABOUT PROJECT </h2>
-<p>A React based project that enables workflow within organizations using Directed Acylic Nodes. I have used React-DND for the drag and drop function and used React-flow for the workflow UI connectors.</p>
+<p>A React based project that enables workflow within organizations using Directed Acyclic Graph. I have used React-DND for the drag and drop function and used React-flow for the workflow Node connectors.</p>
 
 <p>UI designs was made with React Material UI</p>
 

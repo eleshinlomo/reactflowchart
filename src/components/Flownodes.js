@@ -13,6 +13,10 @@ import 'reactflow/dist/style.css';
 
 const Flownodes = () => {
 
+    const nodeStyle = {
+        background: 'red'
+    }
+
     const initialNodes = [
         { id: '1', position: { x: 0, y: 0 }, data: { 
             label: <Box>
@@ -71,6 +75,7 @@ const Flownodes = () => {
       onNodesChange={onNodesChange}
       onEdgesChange={onEdgesChange}
       onConnect={onConnect}
+
     >
       
     </ReactFlow>

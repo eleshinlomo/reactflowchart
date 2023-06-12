@@ -13,6 +13,7 @@ import WifiTetheringErrorIcon from '@mui/icons-material/WifiTetheringError';
 import Flownodes from './Flownodes';
 import Lastcolumn from './Lastcolumn';
 import Firstcolumn from './Firstcolumn';
+import ShortcutIcon from '@mui/icons-material/Shortcut';
 
 
 
@@ -174,7 +175,7 @@ style={{
 
 <Box display='flex' p = {1}>
     <Box >
-        <img src="/spotify_logo.png" alt="spotify logo" className='img' />
+        <img src="/notion_gif.gif" alt="spotify logo" className='img' />
     </Box>
 
 <Box mr={10} ml={1}>
@@ -195,7 +196,7 @@ style={{
 
 <Box display='flex' p = {1}>
     <Box >
-        <img src="/spotify_logo.png" alt="spotify logo" className='img' />
+    <ShortcutIcon />
     </Box>
 
 <Box mr={10} ml={1}>
@@ -215,7 +216,7 @@ style={{
 
 <Box display='flex' p = {1}>
     <Box >
-        <img src="/spotify_logo.png" alt="spotify logo" className='img' />
+        <img src="/github_logo.png" alt="spotify logo" className='img' />
     </Box>
 
 <Box mr={10} ml={1}>
@@ -250,7 +251,7 @@ style={{
 
 <Box display='flex' p = {1}>
     <Box >
-        <img src="/spotify_logo.png" alt="spotify logo" className='img' />
+        <img src="/lastpass_logo.png" alt="spotify logo" className='img' />
     </Box>
 
 <Box mr={10} ml={1}>
@@ -270,7 +271,7 @@ style={{
 
 <Box display='flex' p = {1}>
     <Box >
-        <img src="/spotify_logo.png" alt="spotify logo" className='img' />
+        <img src="/slack_logo.png" alt="spotify logo" className='img' />
     </Box>
 
 <Box mr={10} ml={1}>
