@@ -14,11 +14,11 @@
 <li>OpenAI API</li>
 </ul>
 
-Limitation
+<h3>Limitation</h3>
 
--No Figma design or specification was given so all components sizes and styles were assumed.
+-No Figma design or specification was given so all components sizes and styles were assumed. <br/>
 
--I was also not able to find some logos.
+-I was also not able to find some logos.<br/>
 
 View Project: https://workflownodes.netlify.app
 
@@ -26,13 +26,13 @@ View Project: https://workflownodes.netlify.app
 
 <h5>DOCUMENTATION REFERENCES</h5>
 
-https://reactflow.dev/docs/quickstart/
-https://www.mui.com
+https://reactflow.dev/docs/quickstart/ <br/>
+https://www.mui.com <br/>
 https://react-dnd.github.io/react-dnd/about
 
 
 <h3>YOUTUBE RESOURCES</h3>
-REACT FLOW TUTORIAL: https://www.youtube.com/watch?v=GNI4ZKyXbpA&t=75s
+REACT FLOW TUTORIAL: https://www.youtube.com/watch?v=GNI4ZKyXbpA&t=75s <br/>
 REACT DND TUTORIAL: https://www.youtube.com/watch?v=4bzJrEETW4w
                     
 
