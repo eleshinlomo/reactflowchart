@@ -1,4 +1,5 @@
 <h2>React Frontend Interview Project</h2>
+<h2>Project Status: 60% Complete</h2>
 
 <h2> ABOUT PROJECT </h2>
 <p>A React based project that enables workflow within organizations using Directed Acylic Nodes. I have used React-DND for the drag and drop function and used React-flow for the workflow UI connectors.</p>
@@ -21,9 +22,9 @@ Limitation
 
 View Project: https://workflownodes.netlify.app
 
-<h4>WEBSITE RESOURCES</h4>
 
-<h5>WEBSITE RESOURCES</h5>
+
+<h5>DOCUMENTATION REFERENCES</h5>
 
 https://reactflow.dev/docs/quickstart/
 https://www.mui.com
@@ -32,7 +33,7 @@ https://react-dnd.github.io/react-dnd/about
 
 <h3>YOUTUBE RESOURCES</h3>
 REACT FLOW TUTORIAL: https://www.youtube.com/watch?v=GNI4ZKyXbpA&t=75s
-https://www.youtube.com/watch?v=4bzJrEETW4w
+REACT DND TUTORIAL: https://www.youtube.com/watch?v=4bzJrEETW4w
                     
 
 
