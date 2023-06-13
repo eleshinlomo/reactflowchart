@@ -3,5 +3,10 @@
   height: 20px;
   width: 100%;
   object-fit: cover;
+  color: white;
   
+}
+
+.task{
+  color:orange;
 }

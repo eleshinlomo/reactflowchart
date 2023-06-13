@@ -16,7 +16,7 @@ color='grey'
 display='flex' 
 justifyContent= 'space-between' 
 alignItems= 'space-between'
-marginTop = '35px'
+marginTop = '5px'
 >
 <CancelPresentationOutlinedIcon />
 

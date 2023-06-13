@@ -1,34 +1,45 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
 import { Grid, Paper, Typography, Box, TextField, IconButton, Button, Icon, ButtonGroup } from '@mui/material';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import '../Styles/App.css'
-import CancelPresentationOutlinedIcon from '@mui/icons-material/CancelPresentationOutlined';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import PestControlOutlinedIcon from '@mui/icons-material/PestControlOutlined';
-import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Searchbar from './Searchbar';
-import WifiTetheringErrorIcon from '@mui/icons-material/WifiTetheringError';
-import Flownodes from './Flownodes';
 import Lastcolumn from './Lastcolumn';
 import Firstcolumn from './Firstcolumn';
-import ShortcutIcon from '@mui/icons-material/Shortcut';
+import HotelIcon from '@mui/icons-material/Hotel';
+import Chatgptpage from '../Pages.js/Chatgptpage';
+import Workspace from '../Pages.js/Workspace';
+import WorkspacesIcon from '@mui/icons-material/Workspaces';
 
 
 
 const Projectcard = () => {
+const [showChatGpt, setShowChatGpt] = useState(false)
+const [task, setTask] = useState('Nothing')
+const [showSleepMode, setShowSleepMode] = useState(true)
+const [showWorkSpace, setShowWorkspace] = useState(false)
 
+
+    //  Icons
+    const chatgptIcon = (
+        <Icon>
+            <img src= "/ChatGPT_800x800.png" alt="chat Gpt" className='img' />
+        </Icon>
+    )
+
+    const midjourneyIcon = (
+        <Icon>
+            <img src="/mid_journey_logo.png" alt="midjourney logo" className='img' />
+        </Icon>
+    )
     
   
 
   return (
     
-    <Grid container spacing={1} style={{backgroundColor: 'black', xs: '100%', md: '100%', sm: '100%'}}>
+    <Grid container spacing={2} style={{backgroundColor: 'black', height: '100vh'}}>
 
 {/* left icons (Firstcolumn) */}
 
-      <Grid item xs={0.4} align='center' sx={{backgroundColor: '#333333'}}>
+      <Grid item xs={12} sm={0.4} md={0.4} lg={0.4} align='center' sx={{backgroundColor: '#333333'}} display='none'>
       
       <Box>
         <Firstcolumn />
@@ -42,8 +53,8 @@ const Projectcard = () => {
 
 
 
-      <Grid item>
-      <Paper style= {{backgroundColor:  '#333333'}}>
+      <Grid item  xs={12} sm={12} md={12} lg={3}>
+      <Paper>
 
       {/* Search bar */}
 
@@ -56,99 +67,124 @@ const Projectcard = () => {
 
 <Box p = {1}>
     <Typography >
-        Installed
+        Choose A Task
     </Typography>
 </Box>
 
 {/* Popular AI Icons box */}
 
-
-
-
-<Box mt={1} display="flex" style= {{width: '100%'}} >
+{/* Do Nothing */}
+<Box>
+<Button
+onClick={()=>{
+    setShowSleepMode(true)
+    setShowChatGpt(false)
+    setTask('Nothing')
+    setShowWorkspace(false)
+    }}
+variant="text" 
+size='large'
+startIcon = {<HotelIcon />}
+sx = {{
+    width: '100%',
+    justifyContent: 'flex-start',
+    color: 'white'
+    }}
+>
+    DO NOTHING
+</Button>
+<Typography variant='body3' pl={5} sx={{color: 'white'}}>
+    Take some rest
+</Typography>
+</Box>
 
 {/* ChatGPT */}
 
-<Box p={1}  display="flex">
-<img src="/ChatGPT_800x800.png" alt="chatGPT logo" className='img' />
+<Box>
+<Button 
+onClick={()=>{
+setShowChatGpt(true);
+setTask('chatGPT');
+setShowSleepMode(false)
+setShowWorkspace(false)
+}}
+variant="text" 
+size='large'
+startIcon = {chatgptIcon}
+sx = {{
+    width: '100%',
+    justifyContent: 'flex-start',
+    color: 'white'
+    }}
+>
+    ChatGPT
+    
+</Button>
+
+<Typography variant='body3' pl={5} sx={{color: 'white'}}>
+    Complete task with AI
+</Typography>
 </Box>
+
+
+{/* WORKSPACE */}
 
 <Box>
-<Typography variant="body1">
-    ChatGPT
-</Typography>
-
-<Typography variant='body2' >
-    ChatGPT
+    <Button
+    onClick={()=>{
+    setShowSleepMode(false)
+    setShowChatGpt(false)
+    setTask('Workspace')
+    setShowWorkspace(true)
+    }}
+variant="text" 
+size='large'
+startIcon = {<WorkspacesIcon />}
+sx = {{
+    width: '100%',
+    justifyContent: 'flex-start',
+    color: 'white'
+    }}
+    >
+        WORKSPACE
+    </Button>
+    <Typography variant='body3' pl={5} sx={{color: 'white'}}>
+    Create workflow
 </Typography>
 </Box>
 
-<Box>
-<Paper 
-elevation={10}
-style={{ 
-    backgroundColor: "grey",
-}} 
-   >
-
-<Typography>
-    XR
-</Typography>
-</Paper>
-</Box>
-
-</Box>
 
 
 {/* Midjourney */}
 
-<Box p= {1} display='flex'>
-    <Box >
-        <img src="/mid_journey_logo.png" alt="midjourney logo" className='img' />
-    </Box>
-
-<Box pl={1}>
-    <Typography>
-    Mid Journey
-    </Typography>
-
-    <Typography>
-    Create Illustration
-    </Typography>
-</Box>
-
-</Box>
-
-
-
-{/* OpenAI Helper */}
-
-<Box p = {1} display='flex' flexWrap= 'wrap'  style= {{backgroundColor: "black"}} sx={{xs: '100%', md: '100%', sm: '100%'}}>
-
-    <Box >
-        <img src="/openai.jpg" alt="midjourney logo" className='img' />
-    </Box>
-
-<Box mr={10} ml={1}>
-    <Typography>
-    OpenAI Helper
-    </Typography>
-
-    <Typography>
-    Act as content writer
-    </Typography>
-</Box>
-
 <Box>
-    <Typography>
-    <Icon>
-    <KeyboardArrowUpIcon />
-    </Icon>
-        XC
+
+    <Button
+    onClick={()=>{
+    setShowSleepMode(false)
+    setShowChatGpt(false)
+    setTask('Mid Journey')
+    setShowWorkspace(false)
+    }}
+variant="text" 
+size='large'
+startIcon = {midjourneyIcon}
+sx = {{
+    width: '100%',
+    justifyContent: 'flex-start',
+    color: 'white'
+    }}
+    >
+    Mid Journey
+    </Button>
+
+    <Typography variant='body3' pl={5} sx={{color: 'white'}}>
+    Create Images with AI
     </Typography>
 </Box>
 
-</Box>
+
+
 
 
 {/* Spotify */}
@@ -171,45 +207,6 @@ style={{
 </Box>
 
 
-{/* Notion */}
-
-<Box display='flex' p = {1}>
-    <Box >
-        <img src="/notion_gif.gif" alt="spotify logo" className='img' />
-    </Box>
-
-<Box mr={10} ml={1}>
-    <Typography variant='body1'>
-    Notion
-    </Typography>
-
-    <Typography variant='body2'>
-    Engineering Wiki
-    </Typography>
-</Box>
-
-</Box>
-
-
-
-{/* Shortcuts */}
-
-<Box display='flex' p = {1}>
-    <Box >
-    <ShortcutIcon />
-    </Box>
-
-<Box mr={10} ml={1}>
-    <Typography variant='body1'>
-    Shortcuts
-    </Typography>
-
-    <Typography variant='body2'>
-    Run Installed Shortcuts
-    </Typography>
-</Box>
-
-</Box>
 
 
 {/* Github */}
@@ -238,9 +235,7 @@ style={{
 }} 
    >
 
-<Typography>
-    XR
-</Typography>
+
 </Paper>
 </Box>
 
@@ -291,49 +286,46 @@ style={{
       </Grid>
 
 
-{/* Column 3 */}
+{/* Task Area*/}
 
-      <Grid item xs={6} >
+      <Grid item xs={12} sm={12} md={12} lg={6}>
+
       <Box sx={{width: '100%'}}>
 
+      <Typography>
+        You are currently working on <span className='task'>{task.toUpperCase()}</span>
+      </Typography>
+
+     {showSleepMode ?
+     <div>
       <Box>
         <Typography>
-          
-            {/* Content for the left column */}
-            <h2>OpenAI Helper</h2>
+            Sleep mode
         </Typography>
-        </Box>
+      </Box>
+      </div>:null
+     }
 
-        <Box display='flex'>
-        <Typography style= {{marginRight: '20px', color: 'purple'}}>
-            Configure workflow
+{/* ChatGPT */}
+      
+{ showChatGpt ?
+   <div>
+      <Chatgptpage />
+    </div>:null
+}
 
-            </Typography>
+{/* Workspace */}
 
-        <Typography>
-            Uses OpenAI to do multiple things V1.0.4
-        </Typography>
-        </Box>
+{showWorkSpace ?
 
+<div>
+    <Workspace />
+</div>:null
 
-{/* Drag and Drop Detail container area*/}
-
-    
-<Box  marginY = '1rem' sx={{width: '100%'}}>
-
-{/* Flownodes component*/}
-
-        <Box>
-
-      <Flownodes />
-
-        </Box>
+}
 
 
-    </Box>
-
-        
-        </Box>
+      </Box>
       </Grid>
 
 

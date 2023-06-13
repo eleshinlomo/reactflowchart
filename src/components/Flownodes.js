@@ -64,6 +64,8 @@ const Flownodes = () => {
   const onConnect = useCallback((params) => setEdges((eds) => addEdge(params, eds)), [setEdges]);
 
   return (
+    <div>
+    <h3>Create Workflow For Your Task or Team (DRAG N DROP) </h3>
 
     <div style={{ width: '100%', height: '70vh', backgroundColor: '#333333', padding: '2rem' }}>
     
@@ -78,6 +80,8 @@ const Flownodes = () => {
       
     </ReactFlow>
     
+  </div>
+
   </div>
   )
 }
